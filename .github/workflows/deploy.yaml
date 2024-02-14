@@ -39,6 +39,6 @@ jobs:
           REPOSITORY: kandlerli
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t latest -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker build -t $REGISTRY/$REPOSITORY:latest -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY --all-tags
           
